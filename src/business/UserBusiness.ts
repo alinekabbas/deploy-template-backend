@@ -89,8 +89,6 @@ export class UserBusiness {
 
     const userDB: UserDB | undefined = await this.userDatabase.findByEmail(email)
 
-    console.log(userDB)
-
     if (!userDB) {
       throw new NotFoundError("'email' não cadastrado")
     }
